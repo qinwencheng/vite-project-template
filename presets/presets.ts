@@ -34,7 +34,7 @@ export default (env: ConfigEnv) => {
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
         globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       },
-      resolvers: [ElementPlusResolver()],
+      // resolvers: [ElementPlusResolver()],
     }),
     Components({
       dts: './src/components.d.ts',
@@ -42,7 +42,10 @@ export default (env: ConfigEnv) => {
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       // imports 指定组件所在位置，默认为 src/components; 有需要也可以加上 view 目录
       dirs: ['src/components/'],
-      resolvers: [ElementPlusResolver(), IconsResolver(), VueUseComponentsResolver()],
+      resolvers: [
+        // ElementPlusResolver(),
+        IconsResolver(), VueUseComponentsResolver()
+      ],
     }),
     Icons({
       compiler: 'vue3',
