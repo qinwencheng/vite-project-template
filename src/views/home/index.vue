@@ -1,19 +1,17 @@
 <template>
-  <div class="container max-w-3xl mx-auto mt-40">
-    <div class="h-60 mb-8">
-      <div class="w-52 h-52 mx-auto mb-4"><vitecamp class="w-52 h-52"></vitecamp></div>
-    </div>
+  <span class="w-full">1</span>
+  <span class="w-full">1</span>
+  <div class="demo-input-suffix">
+    <el-row :gutter="20">
+      <span class="ml-3 w-35 text-gray-600 inline-flex items-center">Using attributes</span>
+      <el-input v-model="input1" class="w-50 m-2" placeholder="Pick a date" />
+      <el-input v-model="input2" class="w-50 m-2" placeholder="Type something" />
+    </el-row>
   </div>
 </template>
 
 <script setup lang="ts">
-import vitecamp from '@/assets/svg/vitecamp.svg?component';
-
-ElMessage.info({ message: 'welcome', duration: 1000 });
+import { ref } from 'vue'
+const input1 = ref('')
+const input2 = ref('')
 </script>
-
-<style lang="scss" scoped>
-a {
-  @apply text-sky-400 hover:(text-sky-600) transition-all ease-out duration-100;
-}
-</style>
