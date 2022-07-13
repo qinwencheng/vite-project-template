@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <div class="m-5">
+  <div class="m-5 mb-0 h-[calc(100vh-20px)]">
     <router-view></router-view>
   </div>
-  <TheFooter></TheFooter>
 </template>
