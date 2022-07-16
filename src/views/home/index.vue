@@ -7,7 +7,9 @@
       <el-header>
         <HeaderBar></HeaderBar>
       </el-header>
-      <el-main>Main</el-main>
+      <el-main>
+        <MainPage></MainPage>
+      </el-main>
       <el-footer>
         <TheFooter></TheFooter>
       </el-footer>

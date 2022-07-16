@@ -10,7 +10,18 @@ const asyncRoutes: Array<RouteRecordRaw> = [
       icon: '',
     },
     component: () => import('@/views/home/index.vue'),
-  }
+    children: [
+      {
+        path: '/test',
+        name: 'test',
+        meta: {
+          title: '',
+          icon: '',
+        },
+        component: () => import('@/views/test/testMainPage1.vue'),
+      },
+    ],
+  },
 ];
 
 export default asyncRoutes;
