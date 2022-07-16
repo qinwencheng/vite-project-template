@@ -1,6 +1,6 @@
 <template>
   <el-container class="h-full border border-solid border-red-700">
-    <el-aside>
+    <el-aside class="overflow-hidden">
       <SideBar></SideBar>
     </el-aside>
     <el-container>
@@ -18,4 +18,5 @@
 <script setup lang="ts">
 import HeaderBar from '../layout/header/HeaderBar.vue';
 import SideBar from '../layout/sider/SideBar.vue';
+import MainPage from '../layout/main/MainPage.vue';
 </script>
