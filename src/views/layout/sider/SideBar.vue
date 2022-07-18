@@ -1,13 +1,7 @@
 <template>
   <h5 class="mb-2" @click="ck">开关</h5>
-  <el-scrollbar>
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo h-full"
-      :collapse="isCollapse"
-      @open="handleOpen"
-      @close="handleClose"
-    >
+  <el-scrollbar view-class="h-full">
+    <el-menu default-active="2" :collapse="isCollapse" class="h-full" @open="handleOpen" @close="handleClose">
       <el-sub-menu index="1">
         <template #title>
           <span>Navigator One</span>
