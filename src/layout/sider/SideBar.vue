@@ -2,7 +2,7 @@
   <h5 class="mb-2" @click="ck">开关</h5>
   <el-scrollbar view-class="h-full">
     <el-menu :collapse="isCollapse" class="h-full" router @open="handleOpen" @close="handleClose">
-      <template v-for="item in routerList">
+      <template v-for="item in routerList" :key="item.name">
         <el-menu-item :index="item.path">
           <span>{{ item.name }}</span>
         </el-menu-item>
@@ -25,6 +25,7 @@ const ck = () => {
   toggle();
 };
 const routerList = router.getRoutes();
+console.log(routerList);
 </script>
 
 <style scoped></style>

@@ -18,7 +18,8 @@
 </template>
 
 <script setup lang="ts">
-import HeaderBar from '../layout/header/HeaderBar.vue';
-import SideBar from '../layout/sider/SideBar.vue';
-import MainPage from '../layout/main/MainPage.vue';
+import SideBar from '@/layout/sider/SideBar.vue';
+import HeaderBar from '@/layout/header/HeaderBar.vue';
+import MainPage from '@/layout/main/MainPage.vue';
+import TheFooter from '@/layout/footer/TheFooter.vue';
 </script>
