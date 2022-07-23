@@ -1,32 +1,44 @@
 <template>
-  <el-table :data="tableData" border style="width: 100%">
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+  <div class="tablePanel h-[95%]">
+    <el-table :data="tableData" border width="100%" height="95%" table-layout="auto">
+      <template v-for="item in columnData" :key="item.x">
+        <el-table-column :prop="item.x" :label="item.x" />
+      </template>
+    </el-table>
+  </div>
+
+  <div class="h-[5%]">
+    <el-pagination layout="prev, pager, next" :total="50" />
+  </div>
 </template>
 
 <script lang="ts" setup>
+import { getShowData } from './mockData';
+
+const metaData = getShowData();
+const codeInfosData = metaData.codeInfos;
+const columnData = Object.keys(codeInfosData[0]).map((x) => {
+  return { x };
+});
 const tableData = [
-  {
-    date: '2016-05-03',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-02',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-04',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    date: '2016-05-01',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
+  ...codeInfosData,
 ];
 </script>
+<style scoped>
+.el-table :deep(.cell) {
+  white-space: pre;
+}
+</style>
